@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepPro | Zapatos de Calidad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú de Navegación -->
+    <header>
+        <nav>
+            <div class="logo">Step<span>Pro</span></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button id="btn-dark-mode">🌙 Modo Oscuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Inicio -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Camina con Estilo y Comodidad</h1>
+                <p>Descubre nuestra nueva colección de calzado premium, diseñado para acompañarte en cada paso.</p>
+                <a href="#portafolio" class="btn">Ver Productos</a>
+            </div>
+        </section>
+
+        <!-- Sección Quiénes Somos -->
+        <section id="quienes-somos" class="section">
+            <h2 class="section-title">Quiénes Somos</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>En StepPro, somos apasionados por el buen calzado. Con más de 15 años de experiencia en la industria, fusionamos la artesanía tradicional con el diseño vanguardista. Nuestro objetivo es que cada cliente encuentre el zapato perfecto que defina su personalidad sin sacrificar la ergonomía.</p>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Nuestra tienda de zapatos">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section id="servicios" class="section bg-alt">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="grid-container">
+                <div class="card service-card">
+                    <h3>👞 Asesoría Personalizada</h3>
+                    <p>Nuestros expertos te ayudarán a medir tu pisada y encontrar el ajuste ideal.</p>
+                </div>
+                <div class="card service-card">
+                    <h3>🚚 Envío a Domicilio</h3>
+                    <p>Entregas rápidas y seguras a cualquier parte del país en menos de 48 horas.</p>
+                </div>
+                <div class="card service-card">
+                    <h3>✨ Restauración</h3>
+                    <p>Servicio de limpieza profunda y reparación para darle una segunda vida a tu calzado.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Productos / Portafolio -->
+        <section id="portafolio" class="section">
+            <h2 class="section-title">Portafolio de Productos</h2>
+            <div class="grid-container">
+                <div class="card product-card">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Zapatos Deportivos">
+                    </div>
+                    <h3>Urban Red Sneaker</h3>
+                    <p class="price">$89.99</p>
+                </div>
+                <div class="card product-card">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tenis Blancos">
+                    </div>
+                    <h3>Classic White Runner</h3>
+                    <p class="price">$110.00</p>
+                </div>
+                <div class="card product-card">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Zapatos Formales">
+                    </div>
+                    <h3>Executive Black Oxford</h3>
+                    <p class="price">$145.00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section bg-alt">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" placeholder="ejemplo@correo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" rows="4" placeholder="¿En qué te podemos ayudar?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
+                    <div id="form-feedback" class="feedback"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StepPro. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

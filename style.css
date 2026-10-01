@@ -1,0 +1,283 @@
+/* --- Variables y Paleta de Colores --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --bg-alt: #f4f4f4;
+    --primary-color: #d35400; /* Naranja elegante */
+    --nav-bg: #1a1a1a;
+    --nav-text: #ffffff;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Variables para Modo Oscuro */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --bg-alt: #1e1e1e;
+    --primary-color: #e67e22;
+    --nav-bg: #000000;
+    --card-bg: #2a2a2a;
+    --shadow: 0 4px 6px rgba(255,255,255,0.05);
+}
+
+/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Navegación suave entre secciones */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Navegación --- */
+header {
+    background-color: var(--nav-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    color: var(--nav-text);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+#btn-dark-mode {
+    background: transparent;
+    border: 1px solid var(--nav-text);
+    color: var(--nav-text);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#btn-dark-mode:hover {
+    background: var(--nav-text);
+    color: var(--nav-bg);
+}
+
+/* --- Secciones Generales --- */
+.section {
+    padding: 80px 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+/* --- Hero (Inicio) --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #a04000;
+    transform: translateY(-3px);
+}
+
+/* --- Quiénes Somos --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text, .about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* --- Grillas (Servicios y Portafolio) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* ANIMACIÓN/TRANSICIÓN */
+}
+
+/* Animación de los Zapatos */
+.product-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.img-wrapper {
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.1); /* Zoom en la imagen al hacer hover */
+}
+
+.product-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.price {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Formulario de Contacto --- */
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.btn-submit {
+    width: 100%;
+}
+
+.feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success { color: #27ae60; }
+.error { color: #e74c3c; }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+}
+
+/* --- Diseño Responsivo (Móviles) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Simplificado para móviles, en un proyecto real sería un menú hamburguesa */
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .about-container {
+        flex-direction: column;
+    }
+}
